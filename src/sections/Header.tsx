@@ -7,7 +7,7 @@ export const Header = () => {
     <header className="backdrop-blur-sm sticky top-0">
       <div className="flex justify-center items-center py-3 bg-black text-white text-sm gap-3 ">
         <p className="text-white/60 hidden md:block">
-          Sreamline your workflow and boost your productivity{" "}
+          Sreamline your workflow and boost your productivity
         </p>
         <div className="inline-flex items-center gap-1">
           <p>Get started for free</p>
