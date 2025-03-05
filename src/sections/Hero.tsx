@@ -17,7 +17,7 @@ export const Hero = () => {
             </h1>
             <p className=" text-[22px] leading-[30px] p-4 ">
               Effortlessly turn your ideas into a fully functional, responsive,
-              no-code SaaS website in just minutes with the set of free
+              no-code SaaS website in just minutes, with the set of free
               components for Framer.
             </p>
             <div className="flex gap-1 items-center mt-[30px]">
