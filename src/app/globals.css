@@ -1,3 +1,24 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .btn {
+    @apply bg-black text-white px-2 py-2 rounded-lg inline-flex items-center justify-center tracking-tight gap-1;
+  }
+  .btn-primary {
+    @apply bg-black text-white;
+  }
+  .btn-text {
+    @apply bg-transparent text-black;
+  }
+  .logo-tickeriimage {
+    @apply w-20 h-20;
+  }
+  .section-title {
+    @apply bg-gradient-to-b from-black to-[#001E80] text-transparent bg-clip-text text-6xl font-bold text-center p-9;
+  }
+  .section-description {
+    @apply text-center text-[22px] leading-[30px] tracking-tight text-[#010D3E] m-2;
+  }
+}

@@ -66,5 +66,39 @@ const testimonials = [
 ];
 
 export const Testimonials = () => {
-  return null;
+  return (
+    <section className="bg-gray-50 py-20">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl font-bold text-gray-800">
+            What Our Users Are Saying
+          </h2>
+          <p className="text-gray-600 mt-2">
+            Check out what our users have to say about their experience with our
+            app.
+          </p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {testimonials.map((testimonial, index) => (
+            <div key={index} className="bg-white p-8 rounded-lg shadow-md">
+              <p className="text-gray-600 mb-6">{testimonial.text}</p>
+              <div className="flex items-center">
+                <img
+                  src={testimonial.imageSrc}
+                  alt="avatar"
+                  className="w-12 h-12 rounded-full"
+                />
+                <div className="ml-4">
+                  <h3 className="text-lg font-semibold text-gray-800">
+                    {testimonial.name}
+                  </h3>
+                  <p className="text-gray-600">{testimonial.username}</p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
 };

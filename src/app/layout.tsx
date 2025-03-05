@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import Metadata from "next";
 import { DM_Sans } from "next/font/google";
 import "./globals.css";
 import clsx from "clsx";
@@ -17,7 +17,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="relative">
-      <body className={clsx(dmSans.className, "antialiased bg-[#EAEEFE]")}>
+      <body
+        className={clsx(
+          dmSans.className,
+          "antialiased bg-[#EAEEFE] w-[27.8rem] md:w-full"
+        )}
+      >
         {children}
       </body>
     </html>
