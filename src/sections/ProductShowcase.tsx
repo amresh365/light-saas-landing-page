@@ -13,7 +13,7 @@ export const ProductShowcase = () => {
         <p className="section-description">
           Effortlessly turn your ideas into a fully functional, responsive,
           no-code SaaS website in just minutes with the set of free components
-          for Framer.
+          for Framer
         </p>
       </div>
       <div className="flex justify-center items-center flex-col  relative">
