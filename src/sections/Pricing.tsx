@@ -4,6 +4,7 @@ const pricingTiers = [
     title: "Free",
     bg: "white",
     textColor: "black",
+    btnColor: "white",
     monthlyPrice: 0,
     buttonText: "Get started for free",
     popular: false,
@@ -20,6 +21,7 @@ const pricingTiers = [
     title: "Pro",
     bg: "black",
     textColor: "white",
+    btnColor: "black",
     monthlyPrice: 9,
     buttonText: "Sign up now",
     popular: true,
@@ -38,6 +40,7 @@ const pricingTiers = [
     title: "Business",
     bg: "white",
     textColor: "black",
+    btnColor: "white",
     monthlyPrice: 19,
     buttonText: "Sign up now",
     popular: false,
@@ -59,7 +62,7 @@ const pricingTiers = [
 
 export const Pricing = () => {
   return (
-    <section>
+    <section className=" bg-white">
       <div className="container">
         <h2 className=" section-title">Pricing</h2>
         <p className=" section-description ">
@@ -77,7 +80,7 @@ export const Pricing = () => {
                 <span className="text-sm tracking-tight">/month</span>
               </h4>
               <button
-                className={`w-full mr-2 mt-5 text-${tier.bg} bg-${tier.textColor} rounded-xl p-2`}
+                className={`w-full mr-2 mt-5 text-${tier.btnColor} bg-${tier.textColor} rounded-xl p-2`}
               >
                 {tier.buttonText}
               </button>
