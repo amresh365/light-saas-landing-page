@@ -1,3 +1,4 @@
+"use client";
 import avatar1 from "@/assets/avatar-1.png";
 import avatar2 from "@/assets/avatar-2.png";
 import avatar3 from "@/assets/avatar-3.png";
@@ -7,6 +8,7 @@ import avatar6 from "@/assets/avatar-6.png";
 import avatar7 from "@/assets/avatar-7.png";
 import avatar8 from "@/assets/avatar-8.png";
 import avatar9 from "@/assets/avatar-9.png";
+import { motion } from "framer-motion";
 
 const testimonials = [
   {
@@ -16,7 +18,7 @@ const testimonials = [
     username: "@jamietechguru00",
   },
   {
-    text: "Our team's productivity has skyrocketed since we started using this tool. ",
+    text: "Our team's productivity has skyrocketed since we started using this tool.",
     imageSrc: avatar2.src,
     name: "Josh Smith",
     username: "@jjsmith",
@@ -68,36 +70,61 @@ const testimonials = [
 export const Testimonials = () => {
   return (
     <section className="bg-gray-50 py-20">
+      <div className="text-center mb-16">
+        <div className="text-sm text-gray-500 mb-2">Testimonials</div>
+        <h2 className="text-3xl font-bold text-gray-800">
+          What Our Users Are Saying
+        </h2>
+        <p className="text-gray-600 mt-2 max-w-xl mx-auto">
+          Check out what our users have to say about their experience with our
+          app.
+        </p>
+      </div>
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <div>Testomonials</div>
-          <h2 className="text-3xl font-bold text-gray-800">
-            What Our Users Are Saying
-          </h2>
-          <p className="text-gray-600 mt-2">
-            Check out what our users have to say about their experience with our
-            app.
-          </p>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 [mask-image:linear-gradient(to_bottom,transparent,black_25%,black_75%,transparent)]">
-          {testimonials.map((testimonial, index) => (
-            <div key={index} className="bg-white p-8 rounded-lg shadow-md">
-              <p className="text-gray-600 mb-6">{testimonial.text}</p>
-              <div className="flex items-center">
-                <img
-                  src={testimonial.imageSrc}
-                  alt="avatar"
-                  className="w-12 h-12 rounded-full"
-                />
-                <div className="ml-4">
-                  <h3 className="text-lg font-semibold text-gray-800">
-                    {testimonial.name}
-                  </h3>
-                  <p className="text-gray-600">{testimonial.username}</p>
+        <div className="overflow-hidden relative h-[400px]">
+          <motion.div
+            className="grid grid-cols-1 md:grid-cols-3 gap-8"
+            animate={{
+              y: ["0%", "-100%"],
+            }}
+            transition={{
+              duration: 20,
+              repeat: Infinity,
+              ease: "linear",
+            }}
+            style={{
+              maskImage:
+                "linear-gradient(to bottom, transparent 5%, black 25%, black 75%, transparent 95%)",
+              WebkitMaskImage:
+                "linear-gradient(to bottom, transparent 5%, black 25%, black 75%, transparent 95%)",
+            }}
+          >
+            {/* Duplicate testimonials for seamless animation */}
+            {[...testimonials, ...testimonials].map((testimonial, index) => (
+              <motion.div
+                key={index}
+                className="bg-white p-8 rounded-lg shadow-md"
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+              >
+                <p className="text-gray-600 mb-6">{testimonial.text}</p>
+                <div className="flex items-center">
+                  <img
+                    src={testimonial.imageSrc}
+                    alt="avatar"
+                    className="w-12 h-12 rounded-full"
+                  />
+                  <div className="ml-4">
+                    <h3 className="text-lg font-semibold text-gray-800">
+                      {testimonial.name}
+                    </h3>
+                    <p className="text-gray-600">{testimonial.username}</p>
+                  </div>
                 </div>
-              </div>
-            </div>
-          ))}
+              </motion.div>
+            ))}
+          </motion.div>
         </div>
       </div>
     </section>

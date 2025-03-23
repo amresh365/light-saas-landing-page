@@ -1,8 +1,11 @@
+"use client";
 import ArrowRight from "@/assets/arrow-right.svg";
 import CogImage from "@/assets/cog.png";
 import cylenderImage from "@/assets/cylinder.png";
 import noodleimage from "@/assets/noodle.png";
 import Image from "next/image";
+import { motion } from "framer-motion";
+import { inflate } from "zlib";
 export const Hero = () => {
   return (
     <section className="pt-8 pb-20 md:pt-5 md:pb-10 bg-[radial-gradient(ellipse_at_bottom_left,#183EC2,#EAEEFE66_70%)]">
@@ -37,12 +40,21 @@ export const Hero = () => {
             height={200}
             className="absolute hidden lg:block"
           />
-          <Image
-            src={CogImage}
+          <motion.img
+            src={CogImage.src}
             alt="Cog Image"
             width={300}
             height={300}
             className=" md:h-[600px] md:w-auto md:ml-20 md:mt-10"
+            animate={{
+              translateY: [-30, 30],
+            }}
+            transition={{
+              repeat: Infinity,
+              repeatType: "mirror",
+              duration: 2,
+              ease: "easeInOut",
+            }}
           />
           <Image
             src={noodleimage}

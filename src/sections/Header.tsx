@@ -4,8 +4,8 @@ import Image from "next/image";
 import MenuIcon from "@/assets/menu.svg";
 export const Header = () => {
   return (
-    <header className="backdrop-blur-sm sticky top-0">
-      <div className="flex justify-center items-center py-3 bg-black text-white text-sm gap-3 ">
+    <header className="backdrop-blur-sm sticky top-0 z-10">
+      <div className=" flex justify-center items-center py-3 bg-black text-white text-sm gap-3 ">
         <p className="text-white/60 hidden md:block">
           Sreamline your workflow and boost your productivity
         </p>
@@ -25,7 +25,7 @@ export const Header = () => {
               <a href="#">Customers</a>
               <a href="#">Updates</a>
               <a href="#">Help</a>
-              <button className="bg-black text-white px-2 py-2 rounded-lg inline-flex items-center justify-center tracking-tight gap-1">
+              <button className="bg-black text-white p-5 rounded-lg inline-flex items-center justify-center tracking-tight gap-1 ">
                 Get for free
               </button>
             </nav>

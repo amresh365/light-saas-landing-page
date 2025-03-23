@@ -35,7 +35,7 @@ export const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="w-[400px] md:flex items-center justify-center m-8">
+        <div className="w-[400px] md:flex items-center justify-center">
           <div className="product">
             <ul className="mt-10 mr-8">
               <li>
@@ -49,7 +49,7 @@ export const Footer = () => {
             </ul>
           </div>
           <div className="company ">
-            <ul className="mt-10 mr-8">
+            <ul className="mt-14 mr-8">
               <li>
                 <h4 className="text-white font-bold">Company</h4>
               </li>
@@ -62,7 +62,7 @@ export const Footer = () => {
             </ul>
           </div>
           <div className="resourse">
-            <ul className="mt-10 mr-8">
+            <ul className="mt-3 mr-8">
               <li>
                 <h4 className="text-white font-bold">Resources</h4>
               </li>
@@ -73,7 +73,7 @@ export const Footer = () => {
             </ul>
           </div>
           <div className="legal">
-            <ul className="mt-10 mr-8">
+            <ul className="mt-0 mr-8">
               <li>
                 <h4 className="text-white font-bold">Legal</h4>
               </li>
